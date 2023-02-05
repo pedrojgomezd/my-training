@@ -3,7 +3,7 @@ import { VideoPlayer } from "@/components/videoPlayer";
 import Image from "next/image";
 
 const getData = async (id) => {
-  const data = await fetch(`http://localhost:3000/api/trainings/${id}`);
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API}/api/trainings/${id}`);
 
   return data.json();
 };
