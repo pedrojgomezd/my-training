@@ -1,6 +1,5 @@
 import { Galery } from "@/components/galery";
 import { VideoPlayer } from "@/components/videoPlayer";
-import Image from "next/image";
 
 const getData = async (id) => {
   const data = await fetch(`${process.env.NEXT_PUBLIC_API}/api/trainings/${id}`);
@@ -39,3 +38,12 @@ export default async function Training({ params }) {
     </main>
   );
 }
+
+export async function generateStaticParams() {
+    const trainings = await getData();
+  
+    return trainings.map((post) => ({
+      slug: training.id,
+    }));
+  }
+  
