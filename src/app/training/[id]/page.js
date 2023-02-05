@@ -43,7 +43,7 @@ export async function generateStaticParams() {
     const trainings = await getData();
   
     return trainings.map((post) => ({
-      slug: training.id,
+      id: training.id,
     }));
   }
   
