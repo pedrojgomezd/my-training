@@ -2,7 +2,7 @@ import { ListTrainings } from '@/components/ListTrainings'
 import Image from 'next/image'
 
 const getData = async () => {
-  const data = await fetch("http://localhost:3000/api/trainings")
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API}/api/trainings`)
 
   return data.json()
 }
