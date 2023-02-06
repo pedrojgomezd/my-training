@@ -2,7 +2,15 @@ import { Galery } from "@/components/galery";
 import { VideoPlayer } from "@/components/videoPlayer";
 
 const getData = async (id) => {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API}/api/trainings/${id}`);
+  const data = await fetch(
+    `${process.env.NEXT_PUBLIC_API}/api/trainings/${id}`
+  );
+
+  return data.json();
+};
+
+const getTrainings = async () => {
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API}/api/trainings`);
 
   return data.json();
 };
@@ -40,10 +48,9 @@ export default async function Training({ params }) {
 }
 
 export async function generateStaticParams() {
-    const trainings = await getData();
-  
-    return trainings.map((post) => ({
-      id: training.id,
-    }));
-  }
-  
+  const trainings = await getTrainings();
+
+  return trainings.map((training) => ({
+    id: training.id,
+  }));
+}
