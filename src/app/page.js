@@ -1,9 +1,9 @@
 import { ListTrainings } from '@/components/ListTrainings'
 
 const getData = async () => {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API}/api/trainings`)
+  // const data = await fetch(`${process.env.NEXT_PUBLIC_API}/api/trainings`)
 
-  return data.json()
+  return []
 }
 
 export default async function Home() {
