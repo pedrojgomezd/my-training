@@ -23,7 +23,7 @@ export const VideoPlayer = ({ videos }) => {
   return (
     <div>
       <iframe
-        className="w-full aspect-video "
+        className="w-full aspect-video"
         src={`https://www.youtube.com/embed/${videos[videoSelect]}`}
         title="YouTube video player"
         frameborder="0"
