@@ -1,5 +1,5 @@
 import admin from "firebase-admin";
-var serviceAccount = require("my-training-c8527-firebase-adminsdk-oun09-c52dd2e011.json");
+var serviceAccount = require("trainning-d7c57-firebase-adminsdk-7za55-ac9d75a24e.json");
 
 try {
   admin.initializeApp({
@@ -16,4 +16,7 @@ try {
   }
 }
 
+const authAdmin = admin.auth();
+
+export { admin, authAdmin };
 export default admin;

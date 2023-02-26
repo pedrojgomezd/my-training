@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     regions: stringToArray(regions),
   }
 
-  const response = await firestore.collection("training").add(dataForm)
+  const response = await firestore.collection("trainings").add(dataForm)
 
   res.status(200).json("Success");
 }

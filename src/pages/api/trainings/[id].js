@@ -5,7 +5,7 @@ export default async function handler(req, res) {
 
   const firestore = admin.firestore();
 
- const response = await firestore.collection("training").doc(id).get();
+ const response = await firestore.collection("trainings").doc(id).get();
 
   const data = {
     id: response.id,

@@ -11,18 +11,31 @@
   "dependencies": {
     "@next/font": "13.1.6",
     "autoprefixer": "^10.4.13",
+    "cookie": "^0.5.0",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "firebase": "^9.17.1",
     "firebase-admin": "^11.5.0",
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.3.8",
     "formik": "^2.2.9",
+    "js-cookie": "^3.0.1",
     "next": "13.1.6",
+    "next-absolute-url": "^1.2.2",
+    "next-firebase-auth-edge": "^0.3.1",
     "next-image-zoom": "^1.1.7",
     "postcss": "^8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-loading-hook": "^1.0.0",
+    "react-tailwindcss-select": "^1.6.0",
     "tailwindcss": "^3.2.4",
     "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.5.1",
+    "@types/react": "18.0.27",
+    "standard": "^17.0.0",
+    "typescript": "4.9.5"
   }
 }

@@ -1,3 +1,4 @@
+"use clietn";
 import Link from "next/link";
 
 export const ListTrainings = ({ trainings }) => {

@@ -8,6 +8,8 @@ module.exports = {
  
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/react-tailwindcss-select/dist/index.esm.js"
+
   ],
   theme: {
     extend: {},

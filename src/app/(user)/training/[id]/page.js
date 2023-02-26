@@ -3,14 +3,9 @@ import { VideoPlayer } from "@/components/videoPlayer";
 
 const getData = async (id) => {
   const data = await fetch(
-    `${process.env.NEXT_PUBLIC_API}/api/trainings/${id}`
+    `${process.env.NEXT_PUBLIC_API}/api/trainings/${id}`,
+    { cache: "no-store" }
   );
-
-  return data.json();
-};
-
-const getTrainings = async () => {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API}/api/trainings`);
 
   return data.json();
 };
@@ -45,12 +40,4 @@ export default async function Training({ params }) {
       </div>
     </main>
   );
-}
-
-export async function generateStaticParams() {
-  const trainings = await getTrainings();
-
-  return trainings.map((training) => ({
-    id: training.id,
-  }));
 }
