@@ -17,7 +17,7 @@ export function LoginPage() {
   React.useEffect(() => {
     const redirect = params.get("redirect");
     if (tenant?.id) {
-      router.push(redirect ?? "/");
+      router.push(redirect ?? "/feeding");
     }
   }, [tenant, router, params]);
 

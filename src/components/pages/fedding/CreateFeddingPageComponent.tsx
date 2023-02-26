@@ -9,6 +9,7 @@ import { tranformOpticonWithi18b } from "@/utils/tranformForSelecti18n";
 import { useFormik } from "formik";
 import { TrashIcon } from "@/components/icons";
 import { clientAPI } from "@/utils/clientAPI";
+import { useRouter } from "next/navigation";
 
 export const CreateFeddingPageComponent = () => {
   const [itemsForm, setItemForm] = useState<TItemFormsFood[]>(itemFormsFoods);
@@ -16,6 +17,7 @@ export const CreateFeddingPageComponent = () => {
   const [loading, setLoading] = useState(false);
   const [messagem, setMessagem] = useState(false);
   const [loadingModal, setLoadinModal] = useState(true);
+  const route = useRouter();
 
   useEffect(() => {
     setTimeout(() => setMessagem(false), 3000);
@@ -49,6 +51,7 @@ export const CreateFeddingPageComponent = () => {
           setItemForm(itemFormsFoods);
           setLoading(false);
           setMessagem(true);
+          route.back();
         } catch (error) {
           setLoading(false);
         }

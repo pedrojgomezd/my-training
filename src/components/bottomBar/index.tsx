@@ -33,11 +33,11 @@ interface BottomItemProps {
 }
 
 const bottomLists: BottomItemProps[] = [
-  { title: "Home", icon: <HomeIcon />, link: "/" },
+  { title: "Home", icon: <HomeIcon />, link: "/feeding" },
   { title: "Alimentacion", icon: <FoodIcon />, link: "/feeding" },
-  { title: "Rutina", icon: <MuscleIcon />, link: "/rutina" },
-  { title: "Perfil", icon: <ProfileIcon />, link: "/profile" },
-  { title: "Notificaciones", icon: <NotifyIcon />, link: "/notify" },
+  { title: "Rutina", icon: <MuscleIcon />, link: "/construction" },
+  { title: "Perfil", icon: <ProfileIcon />, link: "/construction" },
+  { title: "Notificaciones", icon: <NotifyIcon />, link: "/construction" },
 ];
 
 const BottomItem = ({ title, icon, link, isActive }: BottomItemProps) => (

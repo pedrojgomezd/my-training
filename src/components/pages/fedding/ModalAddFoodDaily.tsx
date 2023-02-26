@@ -51,7 +51,6 @@ export const ModalAddFoodDaily = ({ isShow, onClose, data }) => {
       },
     });
 
-
   return (
     <div>
       <Modal show={isShow} onClose={onClose}>
@@ -79,7 +78,12 @@ export const ModalAddFoodDaily = ({ isShow, onClose, data }) => {
                 disabled={isMutating}
               />
             </div>
-            <Link href="/feeding/create">Agregar alimento</Link>
+            <div className="mt-4">
+
+            <Button size="xs" fullSized>
+              <Link href="/feeding/create">Agregar alimento</Link>
+            </Button>
+            </div>
           </div>
         </Modal.Body>
         <Modal.Footer className="flex justify-between">

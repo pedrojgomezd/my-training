@@ -9,7 +9,7 @@ export const NavBar = () => {
   
   return (
     <Navbar fluid={true} rounded={true}>
-      <Navbar.Brand href="/" as={Link}>
+      <Navbar.Brand href="/feeding" as={Link}>
         <img
           src="https://img.favpng.com/8/25/0/fitness-centre-ico-physical-fitness-icon-png-favpng-0EVJtkBCbU6x2B1hFzfUi3QPQ.jpg"
           className="mr-3 h-6 sm:h-9"
