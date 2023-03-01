@@ -53,7 +53,7 @@ export const CreateTrainingForm = () => {
           <div className="mb-2 block">
             <Label htmlFor={item} value={item.toLocaleUpperCase()} />
           </div>
-          <TextInput id={item} type="text" placeholder={item.toUpperCase()} onChange={handleChange} value={values[item]} />
+          <TextInput autoComplete="off" id={item} type="text" placeholder={item.toUpperCase()} onChange={handleChange} value={values[item]} />
         </div>
       ))}
       <Button type="submit" disabled={loading}>Save</Button>

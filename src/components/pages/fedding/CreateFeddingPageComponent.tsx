@@ -105,6 +105,7 @@ export const CreateFeddingPageComponent = () => {
                   </div>
                   <div className="flex gap-2">
                     <TextInput
+                      autoComplete="off"
                       id={name}
                       name={name}
                       value={values[name]}

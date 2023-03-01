@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  if (user && request.nextUrl.pathname === "/login") {
+  if (user && ["/login", "/"].includes(request.nextUrl.pathname)) {
     url.pathname = "/feeding";
     return NextResponse.redirect(url);
   }
@@ -24,13 +24,16 @@ const getUser = async (token) => {
   if (!token) {
     return null;
   }
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API}/api/auth/profile`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      cookie: `session=${token}`,
-    },
-  });
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API}/api/auth/profile`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        cookie: `session=${token}`,
+      },
+    }
+  );
 
   const user = await response.json();
 

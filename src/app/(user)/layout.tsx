@@ -1,5 +1,5 @@
 
-import { BottomBar } from "@/components/bottomBar";
+import { BottomBar } from "@/components/BottomBar";
 
 export default async function UserLayout({ children }) {
   return (

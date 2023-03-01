@@ -38,14 +38,12 @@ export const ModalAddFoodDaily = ({ isShow, onClose, data }) => {
           "user/foods/daily/create",
           JSON.stringify(requestData)
         );
-        setIsFetching(true);
-
+        setIsFetching(false);
+        
         resetForm();
-
+        onClose();
+        
         startTransition(() => {
-          // Refresh the current route and fetch new data from the server without
-          // losing client-side browser or React state.
-          onClose();
           router.refresh();
         });
       },
@@ -76,13 +74,17 @@ export const ModalAddFoodDaily = ({ isShow, onClose, data }) => {
                 className="w-full"
                 addon={"gr"}
                 disabled={isMutating}
+                autoComplete="off"
               />
             </div>
             <div className="mt-4">
-
-            <Button size="xs" fullSized>
-              <Link href="/feeding/create">Agregar alimento</Link>
-            </Button>
+              <Button
+                size="xs"
+                fullSized
+                onClick={() => router.replace("/feeding/create")}
+              >
+                Agregar alimento
+              </Button>
             </div>
           </div>
         </Modal.Body>
