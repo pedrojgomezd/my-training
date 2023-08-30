@@ -7,12 +7,12 @@ export default async function handler(req, res) {
   const { date } = req.body;
 
   try {
-    const user = await authMiddleware(req, res, ["POST"]);
+    const user = await authMiddleware(req, res, ["POST", "GET"]);
     
     const response = await firestore
       .collection("users")
       .doc(user.uid)
-      .collection("foods")
+      .collection("foods-test")
       .where(
         "createAt",
         ">",
