@@ -8,7 +8,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const sessionCookie = req.cookies.session || "";
-  console.log({ sessionCookie });
+  // console.log({ sessionCookie });
   admin
     .auth()
     .verifySessionCookie(sessionCookie, true)

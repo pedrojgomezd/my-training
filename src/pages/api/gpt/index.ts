@@ -19,6 +19,8 @@ export default async function handler(
   
   totals: con el total de la suma de todos los nutrientes.
   
+  y no adiciones ningun texto ademas del json
+
   toda la información en inglés solo manten el nombre del alimento en español 
   
   ${data} `;
@@ -39,7 +41,7 @@ export default async function handler(
     });
 
     const output_text = GPTOutput.choices;
-
+    console.log({ GTPCONTENT: output_text[0].message.content });
     const response = await firestore
       .collection("users")
       .doc(user.uid)

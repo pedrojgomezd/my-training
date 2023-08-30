@@ -8,7 +8,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const idToken = req.body.idToken;
-  console.log({ r: req.body });
   // const csrfToken = req.body.csrfToken.toString();
 
   // if (csrfToken !== req.cookies.csrfToken) {

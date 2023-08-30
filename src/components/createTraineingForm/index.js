@@ -42,7 +42,7 @@ export const CreateTrainingForm = () => {
       }catch {
         setLoading(false)
       }
-      console.log(response.json())
+      // console.log(response.json())
     }
   });
 
