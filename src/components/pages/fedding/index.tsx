@@ -36,7 +36,6 @@ export const FeddingPageComponent = ({
         {/* <MoreNutrient foodsDaily={foodsDaily} /> */}
       </div>
       <div className="mt-4">
-        <h3>Lista de</h3>
         {/* <div className="py-4">
           <Button
             size="xs"

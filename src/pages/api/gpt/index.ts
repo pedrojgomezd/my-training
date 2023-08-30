@@ -12,7 +12,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const user = await authMiddleware(req, res, ["POST"]);
-  const { data } = req.body;
+  const { data, food } = req.body;
   const menssage = `Con la información de alimentos que te voy a decir créame un JSON con esta estructura 
 
   foods: name, nutrients: con el nombre y el total nutrientes como proteinas, carbohidratos, grasas, fibras, calorias
@@ -45,7 +45,7 @@ export default async function handler(
       .doc(user.uid)
       .collection("foods-test")
       .add({
-        name: "Almuerzo",
+        name: food,
         ...JSON.parse(output_text[0].message.content),
         createAt: admin.firestore.Timestamp.now(),
         updateAt: admin.firestore.Timestamp.now(),

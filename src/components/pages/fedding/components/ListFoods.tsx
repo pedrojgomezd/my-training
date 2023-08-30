@@ -19,16 +19,20 @@ const ListFoodItem = ({ item }) => {
       className="rounded-md overflow-hidden"
       onClick={() => setOpen((old) => !open)}
     >
-      <div className="bg-white  shadow-md p-2">
-        <div>{item.name}</div>
-        <ul>
+      <div className="bg-white  shadow-md p-4">
+        <div className="text-xl font-bold mb-4">{item.name}</div>
+        <ul className="grid grid-cols-3 gap-2">
           {Object.keys(item.totals).map((key, index) => {
             if (["createAt", "updateAt", "id", "createtAd"].includes(key)) {
               return null;
             }
             return (
-              <li key={index}>
-                {key.toString()} : {item.totals[key].toString()}
+              <li
+                key={index}
+                className=""
+              >
+                <p className="text-xs text-slate-600 text-center capitalize">{key.toString()}</p>
+                <p className="text-2xl font-bold text-center p-0 text-cyan-600">{item.totals[key].toString()}</p>
               </li>
             );
           })}
