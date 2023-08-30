@@ -1,5 +1,5 @@
 import { clientAPI } from "@/utils/clientAPI";
-import { Button, Select } from "flowbite-react";
+import { Button, Select, Spinner } from "flowbite-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -45,7 +45,7 @@ export const FormNewFood = () => {
         placeholder="Dime que comiste?"
       ></textarea>
       <Button disabled={loading} type="submit">
-        Enviar
+        {loading ? <Spinner /> : "Enviar"}
       </Button>
     </form>
   );
