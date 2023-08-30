@@ -1,6 +1,5 @@
 import { NavBar } from "@/components/navbar";
 import "./globals.css";
-import { BottomBar } from "@/components/bottomBar";
 import { getTokens } from "next-firebase-auth-edge/lib/next/tokens";
 import { cookies } from "next/headers";
 
