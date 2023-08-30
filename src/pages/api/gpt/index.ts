@@ -63,8 +63,3 @@ export default async function handler(
     }
   }
 }
-
-const transform = (data) => {
-  const food = data[foods];
-  return {};
-};
