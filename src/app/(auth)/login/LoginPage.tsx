@@ -15,7 +15,7 @@ export function LoginPage() {
   const { tenant, login } = useAuth();
 
   React.useEffect(() => {
-    const redirect = params.get("redirect");
+    const redirect = params?.get("redirect");
     if (tenant?.id) {
       router.push(redirect ?? "/feeding");
     }
