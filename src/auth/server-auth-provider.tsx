@@ -38,10 +38,13 @@ export async function ServerAuthProvider({
     serviceAccount: serverConfig.serviceAccount,
     apiKey: serverConfig.firebaseApiKey,
     cookieName: "mytrainnig",
-    cookieSignatureKeys: [process.env.COOKIE_SECRET_CURRENT, process.env.COOKIE_SECRET_PREVIOUS],
+    cookieSignatureKeys: [
+      process.env.COOKIE_SECRET_CURRENT ?? "",
+      process.env.COOKIE_SECRET_PREVIOUS ?? "",
+    ],
   });
 
   const tenant = tokens ? mapTokensToTenant(tokens) : null;
 
-  return <AuthProvider  defaultTenant={tenant}>{children}</AuthProvider>;
+  return <AuthProvider defaultTenant={tenant}>{children}</AuthProvider>;
 }

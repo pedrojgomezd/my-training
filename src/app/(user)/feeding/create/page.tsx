@@ -3,7 +3,7 @@ import { CreateFeddingPageComponent } from "@/components/pages/fedding/CreateFed
 export default async function FeedingCreatePage() {
   return (
     <main>
-      <CreateFeddingPageComponent />
+      <div />
     </main>
   );
 }
