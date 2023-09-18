@@ -2,10 +2,6 @@ import { ServerAuthProvider } from "@/auth/server-auth-provider";
 import { FeddingPageComponent } from "@/components/pages/fedding";
 import { clientAPI } from "@/utils/clientAPI";
 import { cookies } from "next/headers";
-const fethFoods = async () => {
-  const data = await clientAPI("foods");
-  return await data.json();
-};
 
 const fethFoodsDaily = async () => {
   const data = await fetch(
@@ -22,11 +18,10 @@ const fethFoodsDaily = async () => {
 };
 
 export default async function FeedingPage() {
-  const foods = await fethFoods();
   const daily = await fethFoodsDaily();
   return (
     <main>
-      <FeddingPageComponent foods={foods} foodsDaily={daily} />
+      <FeddingPageComponent foodsDaily={daily} />
     </main>
   );
 }

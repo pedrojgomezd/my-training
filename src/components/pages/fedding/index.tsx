@@ -36,26 +36,9 @@ export const FeddingPageComponent = ({
         {/* <MoreNutrient foodsDaily={foodsDaily} /> */}
       </div>
       <div className="mt-4">
-        {/* <div className="py-4">
-          <Button
-            size="xs"
-            gradientDuoTone="greenToBlue"
-            fullSized
-            onClick={() => setShow(true)}
-          >
-            Agregar alimento a consumir.
-          </Button>
-        </div> */}
         {foodsDaily?.data && <ListFoods items={foodsDaily?.data} />}
         <FormNewFood />
       </div>
-      {loading ? null : (
-        <ModalAddFoodDaily
-          isShow={show}
-          onClose={() => setShow(false)}
-          data={foods}
-        />
-      )}
     </div>
   );
 };

@@ -22,7 +22,7 @@ export default async function handler(
   totals: con el total de la suma de todos los nutrientes.
   
 
-  toda la información en inglés solo manten el nombre del alimento en español 
+  toda la información en inglés solo manten el nombre del alimento en ingles
   
   solo retorn el JSON
 
