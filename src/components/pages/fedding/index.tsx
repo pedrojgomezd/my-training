@@ -9,6 +9,7 @@ import { MoreNutrient } from "./components/MoreNutrient";
 import { ItemCardNutrient } from "./components/ItemNutrintCard";
 import { Button } from "flowbite-react";
 import { FormNewFood } from "./form-new-food";
+import { TotalFoodsNutrients } from "./TotalFoodsNutrients";
 
 export const FeddingPageComponent = ({
   foods = [],
@@ -36,6 +37,7 @@ export const FeddingPageComponent = ({
         {/* <MoreNutrient foodsDaily={foodsDaily} /> */}
       </div>
       <div className="mt-4">
+        {foodsDaily?.data && <TotalFoodsNutrients items={foodsDaily?.data} />}
         {foodsDaily?.data && <ListFoods items={foodsDaily?.data} />}
         <FormNewFood />
       </div>
